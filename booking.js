@@ -54,18 +54,12 @@ function setSheetData() {
   const spreadsheetId = 'GOOGLE_SHEET_ID';
   const range = 'Sheet1!A1:B2';
 
-  // Specify the data to be written
-  const values = [
-    [1, 'John Doe'],
-    [2, 'Jane Smith'],
-  ];
-
   // Make the API request to update values
   gapi.client.sheets.spreadsheets.values.update({
     spreadsheetId: spreadsheetId,
     range: range,
     valueInputOption: 'RAW',
-    resource: { values: values },
+    resource: { values: bookedDetails},
   }).then((response) => {
     console.log('Sheet updated successfully', response);
   }, (error) => {
