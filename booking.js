@@ -41,7 +41,7 @@ gapi.load('client', initClient);
 
 function initClient() {
   gapi.client.init({
-    apiKey: 'AIzaSyB1yP8qELAEqYVWv3h8TxpSZKBwinT__Ig', // Or use OAuth for authenticated requests
+    apiKey: 'YOUR_API_KEY', // Or use OAuth for authenticated requests
     discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
   }).then(() => {
     // Call functions to interact with the API
@@ -51,7 +51,7 @@ function initClient() {
 
 function setSheetData() {
   // Specify the spreadsheet ID and range
-  const spreadsheetId = '1sZPJohwkxDrFaOZaN4sucqaZYfABzxpOcfO8VLz48fw';
+  const spreadsheetId = 'GOOGLE_SHEET_ID';
   const range = 'Sheet1!A1:B2';
 
   // Specify the data to be written
